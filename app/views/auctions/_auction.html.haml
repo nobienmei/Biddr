@@ -1,0 +1,20 @@
+.well
+  %h3
+    = link_to auction.title, auction
+  %br
+  %h4
+    %b 
+      Description:
+  %br
+  %h4
+    = auction.details
+  %hr
+  %h4 
+    %b 
+      Reserve Price:
+    = "$#{auction.reserve_price}"
+  %br
+  %h4
+    %b
+      Ends:
+    = auction.end_date

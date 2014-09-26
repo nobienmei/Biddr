@@ -1,0 +1,12 @@
+.container
+  - if @auction.errors.any?
+    ul
+    - @auction.errors.full_messages.each do |message|
+      li message
+
+  = simple_form_for @auction, html: {class: "form-horizontal"} do |f|
+    = f.input :title, label: "title"
+    = f.input :details, label: "details"
+    = f.input :reserve_price
+    = f.input :end_date
+    = f.submit "Save", class: "btn btn-primary"

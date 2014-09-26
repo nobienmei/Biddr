@@ -1,0 +1,11 @@
+nav.navbar.navbar-default role="navigation" 
+  .container-fluid
+    .navbar-header
+      = link_to "Biddr", root_path, class: "navbar-brand"
+      .pull-right
+		- if current_user
+		  = current_user.full_name
+		  = link_to "logout", logout_path, class: "navbar-brand", method: :delete
+		- else
+		  = link_to "Sign in", login_path, class: "navbar-brand"
+		  = link_to "Sign up", signup_path, class: "navbar-brand"
